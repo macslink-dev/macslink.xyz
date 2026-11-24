@@ -1,0 +1,7 @@
+# MacsLink — Cloudflare Pages redirects
+# URL-uri vechi ale site-ului Flask -> pagini noi (acelasi nume de fisier, deci nu e nevoie de mapari)
+# pagina veche "Suite" era index -> ramane /
+/home            /                      301
+/suite           /                      301
+# produsul mobil se numea "MacsLink CM"
+/macslink-cm     /cm.html               301

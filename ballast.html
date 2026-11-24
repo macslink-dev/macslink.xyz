@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MacsLink Ballast Management — Tank-per-Tank Ballast Log</title>
+<meta name="description" content="MacsLink Ballast Management: visual tank-per-tank ballast water log with drag & drop transfers and automatic reports.">
+<link rel="canonical" href="https://macslink.eu/ballast.html">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="shortcut icon" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon_180.png">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- MASTHEAD orizontal (vapor + valuri animate · hub · MacsLink · 5 iconite) -->
+<header class="mast">
+  <svg class="ship" viewBox="0 0 170 104" role="img" aria-label="MacsLink">
+    <!-- containere -->
+    <rect x="58" y="40" width="20" height="13" rx="1.5" fill="#e8821e"/>
+    <rect x="80" y="40" width="20" height="13" rx="1.5" fill="#17a2a8"/>
+    <rect x="102" y="40" width="20" height="13" rx="1.5" fill="#2f7fd1"/>
+    <rect x="69" y="26" width="20" height="13" rx="1.5" fill="#2fa84f"/>
+    <rect x="91" y="26" width="20" height="13" rx="1.5" fill="#e8821e"/>
+    <!-- cos -->
+    <rect x="126" y="22" width="13" height="31" rx="2" fill="#13324a"/>
+    <rect x="128.5" y="27" width="8" height="5" rx="1" fill="#f5f9fc"/>
+    <!-- coca -->
+    <path d="M34 54 H150 L135 74 H49 Z" fill="#13324a"/>
+    <!-- valuri animate -->
+    <g>
+      <path class="wave" d="M-40 86 q9 -6 18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0"
+            fill="none" stroke="#17a2a8" stroke-width="3.2" stroke-linecap="round"/>
+      <path class="wave w2" d="M-40 95 q9 -6 18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0"
+            fill="none" stroke="#2f7fd1" stroke-width="3.2" stroke-linecap="round"/>
+    </g>
+  </svg>
+
+  <a class="hub" href="index.html" aria-label="MacsLink home"><img src="icons/icon_hub_512.png" alt="MacsLink"></a>
+
+  <div class="brand">
+    <div class="wm">Macs<b>Link</b></div>
+    <div class="tag">Apps for deck officers · made at sea</div>
+  </div>
+
+  <div class="spacer"></div>
+
+  <div class="apps" role="navigation" aria-label="Apps">
+    <a href="cm.html"><img src="icons/icon_cm_512.png" alt=""><span>Container<br>Manager</span></a>
+    <a href="dg.html"><img src="icons/icon_dg_512.png" alt=""><span>DG</span></a>
+    <a href="ballast.html"><img src="icons/icon_ballast_512.png" alt=""><span>Ballast</span></a>
+    <a href="inspect.html"><img src="icons/icon_inspect_512.png" alt=""><span>Inspect</span></a>
+    <a href="slop.html"><img src="icons/icon_slop_512.png" alt=""><span>Slop<br>Chest</span></a>
+  </div>
+</header>
+<div class="util">
+  <a href="index.html#apps">Apps</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="contact.html">Contact</a>
+  <a class="dl" href="https://github.com/macslink-dev/macslink.xyz/releases/latest/download/MACSLink_Suite.exe">⬇ Download</a>
+</div>
+
+<!-- BALLAST -->
+<section id="ballast" class="page-first">
+  <div class="section-tag">// Module 2 · Ballast Management — New</div>
+  <h2>Your Ballast Log,<br><span class="accent">On the Ship's Plan</span></h2>
+  <p class="section-desc">
+    Ballast Management replaces hand-typed log rows with a live picture of the vessel. Every operation you record updates the tank's level, its own sheet in the <b>Tank per tank log</b>, and the reports you hand to port state.
+  </p>
+
+  <div class="ballast-split">
+    <img src="ballast.jpg" alt="MacsLink Ballast — Excel tank log in, ballast report out, tank fill levels in between" loading="lazy">
+    <div class="modes">
+      <div class="mode mode-in">
+        <span class="mode-route">SEA → TANK</span>
+        <div>
+          <h4>Ballasting · Pump In</h4>
+          <p>Drag from the sea onto a tank. Records IN, ACC IN or EXC IN with density, temperature, salinity and origin of water.</p>
+        </div>
+      </div>
+      <div class="mode mode-out">
+        <span class="mode-route">TANK → SEA</span>
+        <div>
+          <h4>Deballasting · Pump Out</h4>
+          <p>Drag a tank out to sea. Records OUT, ACC OUT, EXC OUT or discharge to a reception facility (FAC).</p>
+        </div>
+      </div>
+      <div class="mode mode-tr">
+        <span class="mode-route">TANK → TANK</span>
+        <div>
+          <h4>Internal Transfer</h4>
+          <p>Drag one tank onto another. Both sheets get a linked entry with From / To filled in — one action, two log lines.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">🚢</div>
+      <h3>Vessel Setup in Minutes</h3>
+      <p>Read the tank list straight from your loading computer's <span class="ui">.stb</span> / <span class="ui">.tkp</span> files or a tank-plan PDF, or import an existing tank log to pick up where you left off — capacities included.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🗺️</div>
+      <h3>Your Real Tank Layout</h3>
+      <p>Load a screenshot of the stability software's longitudinal section and MacsLink detects the tank boxes and matches them to tank names. Fine-tune anything in the layout editor; without a picture, an automatic grid is used.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">💧</div>
+      <h3>Live Fill Levels</h3>
+      <p>Every tank shows its current volume and percentage on a colour scale, with ballast and side tanks, port and starboard, laid out as on board. Totals for the whole vessel update as you go.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🧮</div>
+      <h3>Checked Before It's Logged</h3>
+      <p>The operation form previews before/after levels, offers ½ and Max quantities, and blocks overfills, negative levels and missing at-sea data. Salinity is calculated from density and temperature (UNESCO EOS-80).</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📊</div>
+      <h3>Straight into Your Excel Log</h3>
+      <p>Exports to the "Tank per tank log" workbook — one sheet per tank, dates and times in the right format, rows extended automatically past the template's 30. New entries are highlighted in the built-in log preview until exported.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📝</div>
+      <h3>Reports on Your Own Forms</h3>
+      <p>Load the port's or company's ballast reporting form (Word, Excel or fillable PDF) once. MacsLink maps the columns and fills in vessel data, uptake, exchange and discharge details for every tank in use.</p>
+      <p style="margin-top:10px;">Port-by-port ballast report generation — the specific form each port requires, built in and ready to use — is coming next. <span class="wip">In progress</span></p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">↩️</div>
+      <h3>Undo / Redo</h3>
+      <p>Every operation can be undone and redone until you export, so a wrong drag or a typo never ends up in the official log.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🗂️</div>
+      <h3>Multiple Vessel Profiles</h3>
+      <p>Each vessel keeps its own tanks, layout, picture and log, saved automatically. Switch ships in two clicks from the menu — handy for officers rotating between sister vessels.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔒</div>
+      <h3>Offline, On Board</h3>
+      <p>Runs entirely on the ship's PC. No internet connection needed, and no ballast or position data ever leaves the vessel.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Macs<span>Link</span></div>
+  <p>© 2026 MacsLink — apps for deck officers · made at sea · all rights reserved</p>
+  <p>
+    <a href="pricing.html" style="color:var(--muted);text-decoration:none">Pricing</a> &nbsp;·&nbsp;
+    <a href="terms.html" style="color:var(--muted);text-decoration:none">Terms</a> &nbsp;·&nbsp;
+    <a href="macslink-cm-privacy.html" style="color:var(--muted);text-decoration:none">Privacy (CM)</a> &nbsp;·&nbsp;
+    <a href="contact.html" style="color:var(--muted);text-decoration:none">Contact</a>
+  </p>
+</footer>
+
+<script src="js/masthead.js" defer></script>
+</body>
+</html>

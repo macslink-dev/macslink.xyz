@@ -5,25 +5,61 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MacsLink CM — Container Manager for Android</title>
 <meta name="description" content="MacsLink CM: follow container discharge and loading on your phone, bay by bay, from the BAPLIE plan.">
+<link rel="canonical" href="https://macslink.eu/cm.html">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="shortcut icon" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon_180.png">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-logo"><a href="index.html">MACS<span>Link</span></a></div>
-  <div class="nav-links">
-    <a href="dg.html">MACSLink DG</a>
-    <a href="pricing.html">Pricing</a>
-    <a href="cm.html" class="active">MacsLink CM</a>
-    <a href="terms.html">Terms</a>
-    <a href="contact.html">Contact</a>
-    <a href="https://github.com/macslink-dev/macslink.xyz/releases/latest/download/MACSLink_Suite.exe" class="nav-cta">Download Free</a>
+<!-- MASTHEAD orizontal (vapor + valuri animate · hub · MacsLink · 5 iconite) -->
+<header class="mast">
+  <svg class="ship" viewBox="0 0 170 104" role="img" aria-label="MacsLink">
+    <!-- containere -->
+    <rect x="58" y="40" width="20" height="13" rx="1.5" fill="#e8821e"/>
+    <rect x="80" y="40" width="20" height="13" rx="1.5" fill="#17a2a8"/>
+    <rect x="102" y="40" width="20" height="13" rx="1.5" fill="#2f7fd1"/>
+    <rect x="69" y="26" width="20" height="13" rx="1.5" fill="#2fa84f"/>
+    <rect x="91" y="26" width="20" height="13" rx="1.5" fill="#e8821e"/>
+    <!-- cos -->
+    <rect x="126" y="22" width="13" height="31" rx="2" fill="#13324a"/>
+    <rect x="128.5" y="27" width="8" height="5" rx="1" fill="#f5f9fc"/>
+    <!-- coca -->
+    <path d="M34 54 H150 L135 74 H49 Z" fill="#13324a"/>
+    <!-- valuri animate -->
+    <g>
+      <path class="wave" d="M-40 86 q9 -6 18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0"
+            fill="none" stroke="#17a2a8" stroke-width="3.2" stroke-linecap="round"/>
+      <path class="wave w2" d="M-40 95 q9 -6 18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0"
+            fill="none" stroke="#2f7fd1" stroke-width="3.2" stroke-linecap="round"/>
+    </g>
+  </svg>
+
+  <a class="hub" href="index.html" aria-label="MacsLink home"><img src="icons/icon_hub_512.png" alt="MacsLink"></a>
+
+  <div class="brand">
+    <div class="wm">Macs<b>Link</b></div>
+    <div class="tag">Apps for deck officers · made at sea</div>
   </div>
-</nav>
+
+  <div class="spacer"></div>
+
+  <div class="apps" role="navigation" aria-label="Apps">
+    <a href="cm.html"><img src="icons/icon_cm_512.png" alt=""><span>Container<br>Manager</span></a>
+    <a href="dg.html"><img src="icons/icon_dg_512.png" alt=""><span>DG</span></a>
+    <a href="ballast.html"><img src="icons/icon_ballast_512.png" alt=""><span>Ballast</span></a>
+    <a href="inspect.html"><img src="icons/icon_inspect_512.png" alt=""><span>Inspect</span></a>
+    <a href="slop.html"><img src="icons/icon_slop_512.png" alt=""><span>Slop<br>Chest</span></a>
+  </div>
+</header>
+<div class="util">
+  <a href="index.html#apps">Apps</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="contact.html">Contact</a>
+  <a class="dl" href="https://github.com/macslink-dev/macslink.xyz/releases/latest/download/MACSLink_Suite.exe">⬇ Download</a>
+</div>
 
 <!-- MACSLINK CM (Android) -->
 <section id="cm" class="page-first">
@@ -45,6 +81,14 @@
         <li><span><b>Watch handover</b> between officers' phones and merging of markings (officer + AB).</span></li>
         <li><span><b>Offline</b> — everything stays on the phone; no account, no server, no ads.</span></li>
       </ul>
+
+      <div class="cm-plans" style="margin-top:0">
+        <b>Try it with demo plans</b> — fictitious BAPLIE 3.1 files (vessel MACSLINK PIONEER, port call Rotterdam):<br>
+        <a href="demo/MACSLINK_PIONEER_arrival_NLRTM.edi" download>Discharge plan (arrival) ⤓</a> &nbsp;·&nbsp;
+        <a href="demo/MACSLINK_PIONEER_departure_NLRTM.edi" download>Load plan (departure) ⤓</a> &nbsp;·&nbsp;
+        <a href="https://github.com/macslink-dev/macslink.xyz/tree/main/demo">all demo files</a><br>
+        Download both, then load them from the app's start screen. All data in these files is invented.
+      </div>
     </div>
 
     <div class="cm-card">
@@ -64,7 +108,8 @@
 
       <div class="cm-note">
         Support tool for container vessels using MACS3 as the primary cargo planning system. It does not replace the official
-        stowage plan, DG manifest or the officer's own checks.<br>
+        stowage plan, DG manifest or the officer's own checks. MacsLink CM is an independent app and is not affiliated with,
+        endorsed or supported by the developers of MACS3. MACS3 and other product names are trademarks of their respective owners.<br>
         <a href="macslink-cm-privacy.html">Privacy policy</a>
       </div>
     </div>
@@ -73,11 +118,16 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">MACS<span>Link</span></div>
-  <p>© 2026 MACSLink &nbsp;·&nbsp; by Alexandru &nbsp;·&nbsp; All rights reserved</p>
-  <p><a href="terms.html" style="color: var(--muted); text-decoration: none;">Terms & Conditions</a>
-    &nbsp;·&nbsp; <a href="macslink-cm-privacy.html" style="color: var(--muted); text-decoration: none;">MacsLink CM Privacy Policy</a></p>
+  <div class="footer-logo">Macs<span>Link</span></div>
+  <p>© 2026 MacsLink — apps for deck officers · made at sea · all rights reserved</p>
+  <p>
+    <a href="pricing.html" style="color:var(--muted);text-decoration:none">Pricing</a> &nbsp;·&nbsp;
+    <a href="terms.html" style="color:var(--muted);text-decoration:none">Terms</a> &nbsp;·&nbsp;
+    <a href="macslink-cm-privacy.html" style="color:var(--muted);text-decoration:none">Privacy (CM)</a> &nbsp;·&nbsp;
+    <a href="contact.html" style="color:var(--muted);text-decoration:none">Contact</a>
+  </p>
 </footer>
 
+<script src="js/masthead.js" defer></script>
 </body>
 </html>
