@@ -1,130 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MacsLink DG Correlation — PDF Manifest to MACS3 cXML</title>
-<meta name="description" content="MacsLink DG Correlation: reconciles the dangerous goods PDF manifest with the MACS3 cXML cargo plan.">
-<link rel="canonical" href="https://macslink.eu/dg.html">
-<link rel="icon" type="image/png" href="favicon.png">
-<link rel="shortcut icon" href="favicon.png">
-<link rel="apple-touch-icon" href="favicon_180.png">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<title>MacsLink has moved to macslink.eu</title>
+<meta name="robots" content="noindex">
+<script>
+  (function () {
+    var dest = "https://macslink.eu" + window.location.pathname + window.location.search + window.location.hash;
+    var c = document.getElementById("cano"); if (c) c.href = dest;
+    window.location.replace(dest);
+  })();
+</script>
+<link id="cano" rel="canonical" href="https://macslink.eu/">
+<meta http-equiv="refresh" content="0; url=https://macslink.eu/">
+<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#0a0e1a;color:#e6eef6;display:grid;place-items:center;height:100vh;margin:0}a{color:#00b4d8}</style>
 </head>
 <body>
-
-<!-- MASTHEAD orizontal (vapor + valuri animate · hub · MacsLink · 5 iconite) -->
-<header class="mast">
-  <svg class="ship" viewBox="0 0 170 104" role="img" aria-label="MacsLink">
-    <!-- containere -->
-    <rect x="58" y="40" width="20" height="13" rx="1.5" fill="#e8821e"/>
-    <rect x="80" y="40" width="20" height="13" rx="1.5" fill="#17a2a8"/>
-    <rect x="102" y="40" width="20" height="13" rx="1.5" fill="#2f7fd1"/>
-    <rect x="69" y="26" width="20" height="13" rx="1.5" fill="#2fa84f"/>
-    <rect x="91" y="26" width="20" height="13" rx="1.5" fill="#e8821e"/>
-    <!-- cos -->
-    <rect x="126" y="22" width="13" height="31" rx="2" fill="#13324a"/>
-    <rect x="128.5" y="27" width="8" height="5" rx="1" fill="#f5f9fc"/>
-    <!-- coca -->
-    <path d="M34 54 H150 L135 74 H49 Z" fill="#13324a"/>
-    <!-- valuri animate -->
-    <g>
-      <path class="wave" d="M-40 86 q9 -6 18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0"
-            fill="none" stroke="#17a2a8" stroke-width="3.2" stroke-linecap="round"/>
-      <path class="wave w2" d="M-40 95 q9 -6 18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0 t18 0"
-            fill="none" stroke="#2f7fd1" stroke-width="3.2" stroke-linecap="round"/>
-    </g>
-  </svg>
-
-  <a class="hub" href="index.html" aria-label="MacsLink home"><img src="icons/icon_hub_512.png" alt="MacsLink"></a>
-
-  <div class="brand">
-    <div class="wm">Macs<b>Link</b></div>
-    <div class="tag">Apps for deck officers · made at sea</div>
-  </div>
-
-  <div class="spacer"></div>
-
-  <div class="apps" role="navigation" aria-label="Apps">
-    <a href="cm.html"><img src="icons/icon_cm_512.png" alt=""><span>Container<br>Manager</span></a>
-    <a href="dg.html"><img src="icons/icon_dg_512.png" alt=""><span>DG</span></a>
-    <a href="ballast.html"><img src="icons/icon_ballast_512.png" alt=""><span>Ballast</span></a>
-    <a href="inspect.html"><img src="icons/icon_inspect_512.png" alt=""><span>Inspect</span></a>
-    <a href="slop.html"><img src="icons/icon_slop_512.png" alt=""><span>Slop<br>Chest</span></a>
-  </div>
-</header>
-<div class="util">
-  <a href="index.html#apps">Apps</a>
-  <a href="pricing.html">Pricing</a>
-  <a href="contact.html">Contact</a>
-  <a class="dl" href="https://github.com/macslink-dev/macslink.xyz/releases/latest/download/MACSLink_Suite.exe">⬇ Download</a>
-</div>
-
-<!-- PRODUCT (DG) -->
-<section id="product" class="page-first">
-  <div class="section-tag">// Module 1 · DG Correlation</div>
-  <h2>Built for Maritime<br>DG Operations</h2>
-  <p class="section-desc">
-    Purpose-built for port agents, ship operators, and maritime logistics professionals handling dangerous goods documentation.
-  </p>
-
-  <div class="ballast-split">
-    <img src="hero.jpg" alt="MacsLink DG — PDF manifest to MACS3 cXML" loading="lazy">
-    <ul class="module-list">
-      <li>Gross weight, NEC, emergency phone and flash point synced into cXML</li>
-      <li>Stowage positions and signature stamped onto the PDF</li>
-      <li>Marine Pollutant, Limited Quantity and lot-count audit</li>
-      <li>Opens in the same compact window as the standalone app</li>
-    </ul>
-  </div>
-
-  <div class="features-grid">
-    <div class="feature-card">
-      <div class="feature-icon">📄</div>
-      <h3>PDF Manifest Parsing</h3>
-      <p>Automatically extracts dangerous goods data from PDF cargo manifests — UN numbers, classes, quantities, stowage positions, and more.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🔄</div>
-      <h3>MACS3 cXML Sync</h3>
-      <p>Generates MACS3-compatible cXML files ready for direct import. Eliminates manual data entry and transcription errors.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">✅</div>
-      <h3>Data Validation</h3>
-      <p>Built-in validation checks ensure all DG entries are complete and correctly formatted before export.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">⚡</div>
-      <h3>Instant Processing</h3>
-      <p>Process complete manifests with hundreds of DG entries in seconds. No cloud upload required — runs entirely on your desktop.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🔒</div>
-      <h3>Offline &amp; Secure</h3>
-      <p>All data processing happens locally on your machine. No manifest data ever leaves your computer.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🖥️</div>
-      <h3>Windows Desktop App</h3>
-      <p>Native Windows application. No browser, no subscription portal — just install and run.</p>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-logo">Macs<span>Link</span></div>
-  <p>© 2026 MacsLink — apps for deck officers · made at sea · all rights reserved</p>
-  <p>
-    <a href="pricing.html" style="color:var(--muted);text-decoration:none">Pricing</a> &nbsp;·&nbsp;
-    <a href="terms.html" style="color:var(--muted);text-decoration:none">Terms</a> &nbsp;·&nbsp;
-    <a href="macslink-cm-privacy.html" style="color:var(--muted);text-decoration:none">Privacy (CM)</a> &nbsp;·&nbsp;
-    <a href="contact.html" style="color:var(--muted);text-decoration:none">Contact</a>
-  </p>
-</footer>
-
-<script src="js/masthead.js" defer></script>
+<p>MacsLink has moved to <a href="https://macslink.eu/">macslink.eu</a> — redirecting…</p>
 </body>
 </html>
